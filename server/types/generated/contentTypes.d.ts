@@ -376,6 +376,7 @@ export interface ApiBookBook extends Schema.CollectionType {
   attributes: {
     name: Attribute.String;
     description: Attribute.Text;
+    thumbnail: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<'api::book.book', 'oneToOne', 'admin::user'> &
