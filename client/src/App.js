@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import BookList from './Booklist'; // Your existing BookList component
-import BookDescription from './Bookdescription'; 
+import BookList from './Page/Booklist';
+import BookDescription from './Page/Bookdescription'; 
 
 const App = () => (
   <Router>

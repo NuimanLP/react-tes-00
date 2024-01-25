@@ -9,8 +9,9 @@
   }
   
   .book-description-container h2 {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     border-bottom: 1px solid #ccc; 
+    font-size: 25px;
     padding-bottom: 10px;
   }
   
@@ -24,7 +25,14 @@
     cursor: pointer;
   }
   
+ .book-description-container p {
+    text-align: center;
+    font-size: 17px;
+    margin: 25px;
+  }
+
   .book-description-container button:hover {
     background-color: #0056b3;
+    font-weight: bold;
   }
   

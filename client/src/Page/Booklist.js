@@ -2,11 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { Card } from 'antd';
+import { START_URL_STAP } from '../config.js';
 
 const gridStyle = {
+  height : '100px',
   width: '25%',
   textAlign: 'center',
 };
+
 
 const App = () => {
   const [books, setBooks] = useState([]);
@@ -16,6 +19,7 @@ const App = () => {
       try {
         const data = await ListData();
         setBooks(data);
+        console.log(data);
       } catch (error) {
         console.error('Error fetching books:', error);
       }
@@ -23,6 +27,7 @@ const App = () => {
 
     fetchBooks();
   }, []);
+
   return (
     <Card title="Book Library">
       {books.map((book) => (
@@ -37,7 +42,7 @@ const App = () => {
 };
 
 async function ListData() {
-  const response = await axios.get('http://localhost:1337/api/books');
+  const response = await axios.get(START_URL_STAP);
   return response.data.data.map((d) => ({
     id: d.id,
     name: d.attributes.name,
